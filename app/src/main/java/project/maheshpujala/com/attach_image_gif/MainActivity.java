@@ -43,13 +43,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageFinal= (ImageView) findViewById(R.id.image3);
         showLayout = (LinearLayout) findViewById(R.id.show_layout);
 
-
          share = (Button) findViewById(R.id.share_button);
-        share.setOnClickListener(this);
+         share.setOnClickListener(this);
          show = (Button) findViewById(R.id.show_button);
-        show.setOnClickListener(this);
-        back = (Button) findViewById(R.id.back_button);
-        back.setOnClickListener(this);
+         show.setOnClickListener(this);
+         back = (Button) findViewById(R.id.back_button);
+         back.setOnClickListener(this);
 
         Glide.with(imageOne.getContext()).load(R.drawable.leo).into(imageOne);
         Glide.with(imageTwo.getContext()).load(R.drawable.dance).into(imageTwo);
@@ -161,8 +160,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showMergedGif(Uri mergedGif) {
         showLayout.setVisibility(View.VISIBLE);
-//        imageOne.setVisibility(View.GONE);
-//        imageTwo.setVisibility(View.GONE);
         Glide.with(imageFinal.getContext()).load(mergedGif).diskCacheStrategy(DiskCacheStrategy.NONE)
                 .skipMemoryCache(true).into(imageFinal);
     }
@@ -172,5 +169,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         shareIntent.putExtra(Intent.EXTRA_STREAM, mergedGif);
         startActivity(Intent.createChooser(shareIntent, "Share GIF"));
     }
-
 }

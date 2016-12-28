@@ -2,11 +2,24 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Individual Files"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
     <ImageView
         android:id="@+id/image1"
         android:layout_width="match_parent"
@@ -20,7 +33,9 @@
         android:adjustViewBounds="true"
         android:layout_weight="1"/>
     </LinearLayout>
-<LinearLayout
+    </LinearLayout>
+
+    <LinearLayout
     android:id="@+id/show_layout"
     android:visibility="gone"
     android:layout_width="match_parent"
@@ -44,7 +59,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:text="Share"
+            android:text="Share Gif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/black"
@@ -52,7 +67,7 @@
             android:id="@+id/share_button"
             android:layout_weight="1"/>
         <Button
-            android:text="Show"
+            android:text="Show Gif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
